@@ -11,7 +11,7 @@ import {
   deleteContactError,
 } from './phonebook-actions';
 
-axios.defaults.baseURL = 'https://goit-phonebook-api.herokuapp.com';
+axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
 const fetchContact = () => dispatch => {
   dispatch(fetchContatsRequest());

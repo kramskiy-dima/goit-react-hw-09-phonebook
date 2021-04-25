@@ -1,4 +1,4 @@
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Navigaton from '../Navigation';
 import authSelectors from '../../redux/auth/auth-selectors';
 import AutNav from '../AutNav';
@@ -7,7 +7,8 @@ import s from './AppBar.module.css';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 
-const AppBars = ({ onAuth }) => {
+export default function AppBars() {
+  const onAuth = useSelector(authSelectors.getIsAuth);
   return (
     <>
       <AppBar position="static">
@@ -18,8 +19,4 @@ const AppBars = ({ onAuth }) => {
       </AppBar>
     </>
   );
-};
-const mapStateToProps = state => ({
-  onAuth: authSelectors.getIsAuth(state),
-});
-export default connect(mapStateToProps)(AppBars);
+}
