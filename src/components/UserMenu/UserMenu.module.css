@@ -1,0 +1,13 @@
+.userNav {
+  display: flex;
+}
+.profile {
+  margin-right: 10px;
+}
+.welcome {
+  margin: 0;
+}
+.btn:hover {
+  cursor: pointer;
+  color: #e84a5f;
+}

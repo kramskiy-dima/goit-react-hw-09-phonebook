@@ -1,0 +1,15 @@
+.input {
+  margin: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input:focus {
+  border: 2px solid rgb(5, 104, 252);
+}
+
+.label {
+  font-weight: bold;
+}
