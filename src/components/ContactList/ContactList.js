@@ -1,5 +1,5 @@
 import s from './ContactList.module.css';
-import { useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
 import operation from '../../redux/phonebook/phonebook-operaton';
@@ -14,7 +14,10 @@ export default function ContactList() {
     dispatch(operation.fetchContact());
   }, [dispatch]);
 
-  const deleteContact = id => dispatch(operation.deleteContact(id));
+  const deleteContact = useCallback(
+    id => dispatch(operation.deleteContact(id)),
+    [dispatch],
+  );
 
   return (
     <ul className={s.list}>
